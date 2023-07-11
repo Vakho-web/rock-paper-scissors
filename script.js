@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function resetBtn() {
     playerScore = 0
     computerScore = 0
+    document.getElementById("result").innerText = "Result: "
     updateScore()
 }
 
