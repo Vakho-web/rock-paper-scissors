@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 2px solid red;
-}
+} */
 
 body {
     background-image: url(images/background.jpg);
@@ -14,6 +14,7 @@ body {
 
 .main {
     transition: filter 0ms ease-in-out 300ms;
+    text-align: center;
 }
 
 .buttons {
@@ -22,6 +23,7 @@ body {
 }
 
 .result {
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -80,4 +82,27 @@ body.active-popup .popup {
     transition: top 0ms ease-in-out 0ms,
                 opacity 300ms ease-in-out,
                 margin-top 300ms ease-in-out;
+}
+
+.playBtn#rock {
+    background-image: url(images/rock.png);
+}
+
+.playBtn#paper {
+    background-image: url(images/paper.png);
+}
+
+.playBtn#scissors {
+    background-image: url(images/scissors.png);
+}
+
+.playBtn {
+    background-repeat: no-repeat;
+    background-size: cover; /* or "contain" to fit the image within the button */
+    width: 50px; /* adjust the width and height according to your image size */
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20%;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
 }

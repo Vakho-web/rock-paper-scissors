@@ -41,6 +41,7 @@ function getPlayerChoice(event) {
     battle(computerSelection, playerChoice);
 }
 
+//load all DOM elements before any code is run
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('rock').addEventListener('click', getPlayerChoice);
     document.getElementById('paper').addEventListener('click', getPlayerChoice);
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.popup .closeBtn').addEventListener('click', closePopup);
 });
 
+//reset button
 function resetBtn() {
     playerScore = 0
     computerScore = 0
@@ -55,11 +57,13 @@ function resetBtn() {
     updateScore()
 }
 
+//update score
 function updateScore() {
     document.getElementById('playerScore').innerText = "Player Score: " + playerScore;
     document.getElementById('computerScore').innerText = "Computer Score: " + computerScore;
 }
 
+//check for winner
 function checkWinner() {
     if(playerScore === 3) {
         document.body.classList.add('active-popup');
@@ -71,6 +75,7 @@ function checkWinner() {
 
 }
 
+//cllose popup button
 function closePopup() {
     document.body.classList.remove('active-popup');
     resetBtn()
